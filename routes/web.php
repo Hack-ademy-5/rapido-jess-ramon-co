@@ -15,5 +15,4 @@ use App\Http\Controllers\PublicController;
 |
 */
 
-Route::get('/', [AdController::class, 'index'])->name('home');
-
+Route::get('/', [PublicController::class, 'index'])->name('home');
