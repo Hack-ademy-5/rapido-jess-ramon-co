@@ -17,6 +17,10 @@
         <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="password">
     </div>
     <button type="submit" class="btn btn-primary">Login</button>
+     <div class="div form-link d-flex mt-4 ms-5 ps-5 ">
+                <p class="text-white">¿You dont have an account? </p>
+                <a class="text-reset text-decoration-none ms-2" href="{{route('register')}}"><u> Register here</u></a>
+            </div>
 </form>
-
 @endsection
+

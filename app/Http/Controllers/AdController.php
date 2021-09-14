@@ -18,11 +18,11 @@ class AdController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+        public function index()
     {
-        //
+        return view('home');
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *

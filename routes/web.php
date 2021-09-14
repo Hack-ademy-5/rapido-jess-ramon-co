@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
-use App\Http\Controllers\PublicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +14,5 @@ use App\Http\Controllers\PublicController;
 |
 */
 
-Route::get('/', [PublicController::class, 'index'])->name('home');
+
+Route::get('/', [AdController::class,'index'])->name('home');
