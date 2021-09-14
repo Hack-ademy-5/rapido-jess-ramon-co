@@ -12,10 +12,18 @@ class AdController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function __construct()
     {
-        //
+        $this->middleware('auth');
     }
+
+    public function home()
+    {
+        return view('home');
+    }
+
+    
 
     /**
      * Show the form for creating a new resource.
