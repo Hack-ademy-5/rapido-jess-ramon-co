@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ad;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
 
@@ -40,6 +41,8 @@ class AdController extends Controller
         $a = new Ad();
         $a->title = $request->input('title');
         $a->body = $request->input('body');
+        $a->price = $request->input('price');
+        $a->category_id = $request->input('category');
         $a->save();
         return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
     }
