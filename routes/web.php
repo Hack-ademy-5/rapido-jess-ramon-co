@@ -21,3 +21,9 @@ Route::get('/', [PublicController::class,'index'])->name('home');
 //C de Ad
 Route::get('/ad/new', [AdController::class,'newAd'])->name('ad.new');
 Route::post('/ad/create', [AdController::class,'createAd'])->name('ad.create');
+
+//mostrar Anuncio por Categoria
+Route::get('/category/{name}/{id}/ads', [PublicController::class,'adsByCategory'])->name('category.ads');
+
+//mostrar anuncio
+Route::get('/ad/{id}', [AdController::class,'details'])->name("ad.details");

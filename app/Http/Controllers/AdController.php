@@ -27,7 +27,10 @@ class AdController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
+    public function index()
+    {
+        return view('home');
+    }
 
     public function newAd() 
     {
@@ -40,10 +43,16 @@ class AdController extends Controller
         $a->title = $request->input('title');
         $a->body = $request->input('body');
         $a->price = $request->input('price');
-         $a->user_id = Auth::id();
+        $a->user_id = Auth::id();
         $a->category_id = $request->input('category');
         $a->save();
         return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
+    }
+
+    public function details($id) 
+    {
+        $ad = Ad::findOrFail($id);
+        return view("ad.details",["ad"=>$ad]);
     }
 
     /**
