@@ -16,7 +16,7 @@ use App\Http\Controllers\PublicController;
 */
 
 //Home
-Route::get('/', [AdController::class,'index'])->name('home');
+Route::get('/', [PublicController::class,'index'])->name('home');
 
 //C de Ad
 Route::get('/ad/new', [AdController::class,'newAd'])->name('ad.new');

@@ -6,6 +6,7 @@ use App\Models\Ad;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
+use Illuminate\Support\Facades\Auth;
 
 class AdController extends Controller
 {
@@ -26,10 +27,7 @@ class AdController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function index()
-    {
-        return view('home');
-    }
+
 
     public function newAd() 
     {
@@ -42,6 +40,7 @@ class AdController extends Controller
         $a->title = $request->input('title');
         $a->body = $request->input('body');
         $a->price = $request->input('price');
+         $a->user_id = Auth::id();
         $a->category_id = $request->input('category');
         $a->save();
         return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
