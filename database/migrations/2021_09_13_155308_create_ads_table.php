@@ -17,11 +17,12 @@ class CreateAdsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
+            $table->string('body');
+
+            /* $table->string('title');
             $table->unsignedBigInteger('price');
             $table->text('description');
-            $table->string('category');
-
-
+            $table->string('category'); */
 
         });
     }

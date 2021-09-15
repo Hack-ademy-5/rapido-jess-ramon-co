@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Category;
 
 class CreateCategoriesTable extends Migration
 {
@@ -18,6 +19,17 @@ class CreateCategoriesTable extends Migration
             $table->timestamps();
             $table->string('name');
         });
+
+        $categories = [
+            'motores', 'auto', 'electrodomésticos', 'libros', 
+            'juegos', 'deporte', 'imobiles', 'moviles', 'mobiliario'
+        ];
+        
+        foreach ($categories as $category) {
+            $c = new Category();
+            $c->name = $category;
+            $c->save();
+        }
     }
 
     /**

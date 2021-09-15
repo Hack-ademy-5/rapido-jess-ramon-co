@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ad;
 use Illuminate\Http\Request;
+use App\Http\Requests\AdRequest;
 
 class AdController extends Controller
 {
@@ -17,20 +18,30 @@ class AdController extends Controller
     {
         $this->middleware('auth');
     }
-
-        public function index()
-    {
-        return view('home');
-    }
     
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+
+    public function index()
     {
-        //
+        return view('home');
+    }
+
+    public function newAd() 
+    {
+        return view('ad.new'); 
+    }
+    
+    public function createAd(AdRequest $request)
+    {
+        $a = new Ad();
+        $a->title = $request->input('title');
+        $a->body = $request->input('body');
+        $a->save();
+        return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
     }
 
     /**
