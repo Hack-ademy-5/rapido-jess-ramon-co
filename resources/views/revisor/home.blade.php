@@ -23,7 +23,7 @@
                   <hr>
                   <div class="row">
                       <div class="col-md-3">
-                          <h3>Titulo</h3>
+                          <h3>{{__('producto')}}</h3>
                       </div>
                       <div class="col-md-9">
                           {{$ad->title}}
@@ -32,7 +32,7 @@
                   <hr>
                   <div class="row">
                       <div class="col-md-3">
-                          <h3>Descripción</h3>
+                          <h3>{{__('ui.descripcionAnuncio')}}</h3>
                       </div>
                       <div class="col-md-9">
                           {{$ad->body}}
@@ -47,18 +47,18 @@
       <div class="col-md-6">
       <form action="{{route('revisor.ad.reject',['id'=>$ad->id])}}" method="POST">
           @csrf
-          <button type="submit" class="btn btn-danger">Rechazar</button>
+          <button type="submit" class="btn btn-danger">{{__('ui.rechazar')}}</button>
       </form>
       </div>
       <div class="col-md-6 text-right">
           <form action="{{route('revisor.ad.accept',['id'=>$ad->id])}}" method="POST">
               @csrf
-              <button type="submit" class="btn btn-success">Aceptar</button>
+              <button type="submit" class="btn btn-success">{{__('ui.aceptar')}}</button>
           </form>
       </div>
   </div>
 </div>
 @else 
-  <h3 class="text-center"> no hay anuncios para revisar </h3> 
+  <h3 class="text-center"> {{__('ui.sinAnuncios')}} </h3> 
 @endif
 @endsection

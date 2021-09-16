@@ -7,4 +7,7 @@ return [
     'anuncioPorCategoria'=>'Ads by Category',
     'anuncio'=>'Ad',
     'usuario'=>'User',
+    'rechazar'=>'To refuse',
+    'aceptar'=>'To accept',
+    'sinAnuncios'=>'There are no ads to review',    
 ];
