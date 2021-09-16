@@ -1,2 +1,9 @@
-@import "~bootstrap/scss/bootstrap";    //~ significa carpeta node-modules
+@import "~bootstrap/scss/bootstrap";
 @import "style.css";
+.backcolor-nav {
+    background-color: #dfebe8;
+}
+nav a,
+.nav-link {
+    color: #000;
+}

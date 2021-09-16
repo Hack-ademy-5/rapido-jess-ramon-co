@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg backcolor-nav sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -54,6 +54,20 @@
                         </li>
                     </ul>
                 </li>
+
+                @auth
+                    @if(Auth::user()->is_revisor)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('revisor.home') }}">
+                        Revisor Casa
+                        <span class="badge rounded-pill bg-danger">
+                        {{\App\Models\Ad::ToBeRevisionedCount() }}
+                        </span>
+                        </a>
+                    </li>
+                    @endif
+                @endauth
+
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
