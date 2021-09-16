@@ -7,4 +7,11 @@ return [
     'anuncioPorCategoria'=>'Annunci per Categoria',
     'anuncio'=>'Annunci',
     'usuario'=>'Utente',
+    'leermas'=>'Per saperne di più',
+    'crearAnuncio'=> ' Cosa caricherai?',
+    'producto'=> 'Prodotto',
+    'descripcionAnuncio'=>'descrivi il tuo prodotto',
+    'precio'=>'Prezzo',
+
+
 ];

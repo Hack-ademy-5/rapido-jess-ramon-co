@@ -4,12 +4,12 @@
 
 @section('content')
 
-<h1>Crear Anuncio</h1>
+<h1>{{__('ui.crearAnuncio') }}</h1>
 
 <form method="POST" action='{{route("ad.create")}}'>
     @csrf
     <div class="form-group">
-        <label for="adName">Titulo</label>
+        <label for="adName">{{__('ui.producto')}}</label>
         <input type="text" class="form-control" id="adName" name="title" value="{{old('title')}}">
     </div>
     @error('title')
@@ -19,7 +19,7 @@
     @enderror
 
     <div class="form-group">
-        <label for="adBody">Anuncio</label>
+        <label for="adBody">{{__('ui.descripcionAnuncio')}}</label>
         <textarea class="form-control" name="body" id="adBody" cols="30" rows="10">{{old("body")}}</textarea>
     </div>
     @error('body')
@@ -29,7 +29,7 @@
     @enderror
 
     <div class="form-group">
-        <label for="adPrice">Precio</label>
+        <label for="adPrice">{{__('ui.precio')}}</label>
         <input type="number" step="0.01" class="form-control" id="adPrice" aria-describedby="priceHelp" name="price"
             value="{{old("price")}}">
     @error('price')
@@ -38,7 +38,7 @@
     </div>
 
     <div class="form-group text-bold me-5  ms-5">
-        <label for="form-label" class="my-2">Categorias</label>
+        <label for="form-label" class="my-2"> {{__('ui.categorias')}}</label>
         <select class="form-control" id="categories" name="category">
             @foreach($categories ?? '' as $category)
             <option value="{{$category->id}}" {{old('category') == $category->id ? 'selected' : ''}}>{{$category->name}}

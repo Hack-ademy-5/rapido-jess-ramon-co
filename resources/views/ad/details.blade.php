@@ -10,7 +10,7 @@
 
 
 <div class="row"> 
-    <h1>Nombre del anuncio: {{$ad->title}}</h1>       
+    <h1> {{$ad->title}}</h1>       
 </div>
 
 <div class="row">
@@ -22,9 +22,9 @@
               <h6 class="card-subtitle mb-2 text-muted">{{$ad->price}}</h6>
               <p class="card-text"> {{$ad->body}}</p>
               <h6 class="card-subtitle mb-2">
-                <strong>Categoria: <a href="{{route('category.ads',['name'=>$ad->category->name,'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong>
+                <strong>{{__('uri.'categorias')}}: <a href="{{route('category.ads',['name'=>$ad->category->name,'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong>
             <i>{{$ad->created_at->format('d/m/Y')}} - {{$ad->user->name }}</i></h6>
-            <a href="{{route("ad.details", ['id'=>$ad->id])}}">Leer más</a>
+            <a href="{{route("ad.details", ['id'=>$ad->id])}}">{{__('uri.leermas')}}</a>
               <a href="#" class="card-link">Link</a>
             </div>
         </div>
