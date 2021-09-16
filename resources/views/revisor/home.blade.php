@@ -7,12 +7,12 @@
       <div class='col-12'>
           <div class="card">
               <div class="card-header">
-                  Anuncio #{{$ad->id}}
+                  {{__('ui.anuncio')}} #{{$ad->id}}
               </div>
               <div class="card-body">
                   <div class="row">
                       <div class="col-md-3">
-                          <h3>Usuario</h3>
+                          <h3>{{__('ui.usuario')}}</h3>
                       </div>
                       <div class="col-md-9">
                           #{{$ad->user->id}}

@@ -6,7 +6,7 @@
 
 <div class="container my-5">
 <div class="row">
-        <h1>Anuncios por categoría: {{$category->name}}</h1>
+        <h1>{{__('ui.anuncioPorCategoria')}}: {{$category->name}}</h1>
         @include('ad._ad')
 </div>
 <div class="row my-3">

@@ -10,7 +10,7 @@
 
 <div class="container my-5">
     <div class="row"> 
-            <h1>Bienvenidos a Rápido.es</h1>
+            <h1>{{__('ui.welcome')}}</h1>
             @include('ad._ad') 
     </div>
 </div>
