@@ -34,3 +34,6 @@ Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home')
 //Rutas para aceptar o rechazar
 Route::post('/revisor/ad/{id}/accept',[RevisorController::class,'accept'])->name('revisor.ad.accept');
 Route::post('/revisor/ad/{id}/reject',[RevisorController::class,'reject'])->name('revisor.ad.reject');
+
+//Rutas para los idiomas
+Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('locale');

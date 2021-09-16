@@ -25,4 +25,12 @@ public function adsByCategory($name, $category_id)
    
     return view('ads', compact ('category', 'ads'));
     }
+
+
+public function locale($locale)
+    {
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
+
 }
