@@ -13,4 +13,7 @@ return [
     'descripcionAnuncio'=>'Describe tu producto',
     'precio'=>'Precio',
 
+    'rechazar'=>'Rechazar',
+    'aceptar'=>'Aceptar',
+    'sinAnuncios'=>'No hay anuncios para revisar', 
 ];

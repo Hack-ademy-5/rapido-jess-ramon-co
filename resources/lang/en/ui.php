@@ -14,4 +14,7 @@ return [
     'precio'=>'Price',
 
 
+    'rechazar'=>'To refuse',
+    'aceptar'=>'To accept',
+    'sinAnuncios'=>'There are no ads to review',    
 ];

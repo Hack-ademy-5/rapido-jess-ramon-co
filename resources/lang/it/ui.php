@@ -14,4 +14,7 @@ return [
     'precio'=>'Prezzo',
 
 
+    'rechazar'=>'per rifiutare',
+    'aceptar'=>'Accettare',
+    'sinAnuncios'=>'Non ci sono annunci da recensire', 
 ];
