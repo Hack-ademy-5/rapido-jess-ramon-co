@@ -11269,3 +11269,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.backcolor-nav {
+  background-color: #dfebe8;
+}
+
+nav a,
+.nav-link {
+  color: #000;
+}
