@@ -54,21 +54,25 @@
                         </li>
                     </ul>
                 </li>
-
                 @auth
-                    @if(Auth::user()->is_revisor)
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('revisor.home') }}">
+                @if(Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('revisor.home') }}">
                         Revisor Casa
                         <span class="badge rounded-pill bg-danger">
-                        {{\App\Models\Ad::ToBeRevisionedCount() }}
+                            {{\App\Models\Ad::ToBeRevisionedCount() }}
                         </span>
-                        </a>
-                    </li>
-                    @endif
+                    </a>
+                </li>
+                @endif
                 @endauth
-
             </ul>
+            <div>
+                @include('layouts._locale',["lang"=>'es','nation'=>'es'])
+                @include('layouts._locale',["lang"=>'en','nation'=>'gb'])
+                @include('layouts._locale',["lang"=>'it','nation'=>'it'])
+            </div>
+
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
