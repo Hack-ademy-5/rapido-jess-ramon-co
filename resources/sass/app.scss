@@ -1,7 +1,7 @@
 @import "~flag-icon-css/sass/flag-icon";
 @import "~bootstrap/scss/bootstrap";
 @import "style.css";
-@import '~flag-icon-css/sass/flag-icon';
+@import "~flag-icon-css/sass/flag-icon";
 .backcolor-nav {
     background-color: #dfebe8;
 }
@@ -9,3 +9,22 @@ nav a,
 .nav-link {
     color: #000;
 }
+
+// Inicio: diseño /ad/new
+.section-new-ad {
+    background-color: #f9f9f9;
+}
+
+.col-new-ad {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 3em;
+}
+
+.main-tile-new-ad {
+    padding: 1.2em 0em;
+    font-size: 2em;
+}
+//FIn: diseño /ad/new

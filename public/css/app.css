@@ -14928,3 +14928,20 @@ nav a,
 .nav-link {
   color: #000;
 }
+
+.section-new-ad {
+  background-color: #f9f9f9;
+}
+
+.col-new-ad {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 3em;
+}
+
+.main-tile-new-ad {
+  padding: 1.2em 0em;
+  font-size: 2em;
+}
