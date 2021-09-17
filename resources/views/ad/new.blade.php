@@ -4,16 +4,13 @@
 
 @section('content')
 
-<!-- <header>
-<h1>{{__('ui.crearAnuncio') }}</h1>
-</header> -->
 
 <!-- inicio diseño bootstrap -->
 
 <section class="section-new-ad">
 <div class="container px-5 py-3">
     <div class="row g-5">
-        <div class="col-6 bg-white col-new-ad">
+        <div class="col-8 bg-white col-new-ad">
             <h1 class="main-tile-new-ad">{{__('ui.crearAnuncio') }}</h1>
 
             <!-- Inicio Form -->
@@ -21,7 +18,7 @@
                 @csrf
 
                 <!-- Producto -->
-                <div class="form-group">
+                <div class="form-group empty-bottom">
                     <label for="adName">{{__('ui.producto')}}</label>
                     <input type="text" class="form-control" id="adName" name="title" value="{{old('title')}}">
                 </div>
@@ -33,7 +30,7 @@
                 @enderror
 
                 <!-- Descripción del producto -->
-                <div class="form-group">
+                <div class="form-group empty-bottom">
                     <label for="adBody">{{__('ui.descripcionAnuncio')}}</label>
                     <textarea class="form-control" name="body" id="adBody" cols="30"
                         rows="10">{{old("body")}}</textarea>
@@ -46,7 +43,7 @@
                 @enderror
 
                 <!-- Precio -->
-                <div class="form-group">
+                <div class="form-group empty-bottom">
                     <label for="adPrice">{{__('ui.precio')}}</label>
                     <input type="number" step="0.01" class="form-control" id="adPrice" aria-describedby="priceHelp"
                         name="price" value="{{old("price")}}">
@@ -56,7 +53,7 @@
                 </div>
 
                 <!-- Escoger categorías -->
-                <div class="form-group text-bold me-5  ms-5">
+                <div class="form-group text-bold me-5  ms-5 empty-bottom">
                     <label for="form-label" class="my-2"> {{__('ui.categorias')}}</label>
                     <select class="form-control" id="categories" name="category">
                         @foreach($categories ?? '' as $category)
@@ -67,7 +64,7 @@
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-dark">Venderlo ya! </button>
+                <button type="submit" class="btn btn-dark empty-top">Subir producto</button>
             </form>
             <!-- Fin  Form -->
         </div>
