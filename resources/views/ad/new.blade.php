@@ -64,7 +64,7 @@
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-dark empty-top">Subir producto</button>
+                <button type="submit" class="btn btn-dark empty-top text-white">Subir producto</button>
             </form>
             <!-- Fin  Form -->
         </div>
