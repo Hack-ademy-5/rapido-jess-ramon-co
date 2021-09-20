@@ -48,8 +48,6 @@
         <small>Electrodomésticos</small>
     </div>
 
-
-
     <div class="item-cat">Mobiliario</div>
     <div class="item-cat">Deporte</div>
     <div class="item-cat">Móviles</div>
@@ -80,14 +78,14 @@
         <div class="row g-4">
 
             <!-- caja 1 (cat1 - elec)-->
-            @foreach ($categories as $category )
-                @if ($category->ads()->latest()->first())
+            @foreach($categories as $category)
+                @if($category->ads()->latest()->first())
                 <div class="col-md-6 col-lg-4">
                     <!-- p-2_ 2 de padding alrededor -->
                     <div class="p-1 border box-measure "> {{$category->ads()->latest()->first()->title }} </div>
                 </div>
                 @endif
-                @if ($loop->iteration % 3 == 0) 
+                @if($loop->iteration % 3 == 0) 
                 <!-- caja 2 (mensaje: Recicla)-->
                 <div class="col-md-6 col-lg-4">
                     <div class="p-4 box-measure d-none  d-sm-none d-md-block text-end box-with-text-one">
@@ -142,9 +140,5 @@
                 </div>
             </div>
 </section>
-
-
-
-
 
 @endsection

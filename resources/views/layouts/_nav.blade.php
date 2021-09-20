@@ -37,11 +37,6 @@
                 </li>
                 @endguest
 
-                <!-- Subir anuncio a la plataforma -->
-                <li class="nav-item">
-                    <a class="nav-link active mostrar" aria-current="page" href="{{ route('ad.new')}}">{{__('ui.subir')}}</a>
-                </li>
-
                 <!-- <i class="fas fa-upload ocultar"></i> -->
 
                 <!-- Menú desplegable con las distintas categorías -->
@@ -84,19 +79,16 @@
                 @endif
 
                 <!-- Cambiar idioma. Disponibles: español, inglés e italiano -->
-                <div class="my-idioma ms-5 me-5">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link mostrar dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="far fa-flag ocultar"></i>{{__('ui.idioma')}}
-                        </a>
-                        <ul class="dropdown-menu flag-dropdown" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'es','nation'=>'es'])</a></li>
-                            <li><a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'en','nation'=>'gb'])</a></li>
-                            <li><a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'it','nation'=>'it'])</a></li>
-                        </ul>
-                    </li>
+                <div class="d-flex">
+                    <a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'es','nation'=>'es'])</a>
+                    <a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'en','nation'=>'gb'])</a>
+                    <a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'it','nation'=>'it'])</a>
                 </div>
+
+                <!-- Subir anuncio a la plataforma -->
+                <li class="nav-item my-idioma">
+                    <a class="nav-link active mostrar" aria-current="page" href="{{ route('ad.new')}}">{{__('ui.subir')}}</a>
+                </li>
 
                 <!-- Solo para el revisor -->
                 @auth
