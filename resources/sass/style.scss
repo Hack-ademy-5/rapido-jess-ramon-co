@@ -58,6 +58,119 @@ body {
 //  Inicializar CSS - fin
 
 // INICIO: nav
+<<<<<<< HEAD
+=======
+.backcolor-nav {
+    background-color: $color-secondary;
+}
+nav a,
+.nav-link {
+    color: #000;
+}
+// FIN: nav
+
+// >>> Diseño-home-INICIO( / )
+
+// text + h1
+
+.containerhome-text-h1 {
+    margin-top: 3em;
+    margin-bottom: 0.7em;
+}
+
+.text-family-h1 {
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+}
+
+.home-title {
+    margin-bottom: 2em;
+}
+
+// Slider Categorias
+.wrapper {
+    max-height: 120px;
+    // border: 1px solid rgb(150, 146, 146);
+    display: flex;
+    overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+    // width: 0;
+    display: none;
+}
+
+.wrapper .item-cat {
+    min-width: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    background-color: $color-backg;
+    margin-right: 2px;
+}
+
+.arrow-horizontal-scroll {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: #f9fafa;
+    border: none;
+    padding: 0;
+    transition: background-color 280ms ease-in;
+}
+
+// NO puedo mostrar la imagen
+// .img-arrow {
+//     width: 48px;
+//     height: 48px;
+//     overflow: hidden;
+// }
+
+// último anuncio de cada categoría
+.main-section-home {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+.box-measure {
+    height: 20em;
+}
+.box-with-text-one {
+    background-color: $color-tertiary;
+}
+.box-with-text-two {
+    background-color: $color-secondary;
+}
+// >>>Diseño-home - FIN ( / )
+
+// INICIO: Diseño /ad/new
+.section-new-ad {
+    background-color: $color-backg;
+}
+
+.col-new-ad {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 3em;
+}
+
+.main-tile-new-ad {
+    padding: 1.2em 0em;
+    font-size: 2em;
+}
+
+.empty-bottom {
+    margin-bottom: 1em;
+}
+.empty-top {
+    margin-top: 0.7em;
+}
+//FIN: diseño /ad/new
+
+>>>>>>> c46f8ca71329fac2f07adec2a3214a7ea3274139
 .backcolor-nav {
     background-color: $color-secondary;
 }
@@ -190,7 +303,12 @@ nav a,
     color: #000;
 }
 
+<<<<<<< HEAD
 .my-icon-nav {
+=======
+//navbar
+.my-icon-nav{
+>>>>>>> c46f8ca71329fac2f07adec2a3214a7ea3274139
     background-color: #fbf6e1;
     margin: 10px;
     padding: 10px;
@@ -222,7 +340,12 @@ nav a,
     border-radius: 25px;
 }
 
+<<<<<<< HEAD
 .my-border-category {
+=======
+//cards
+.my-border-category{
+>>>>>>> c46f8ca71329fac2f07adec2a3214a7ea3274139
     border-bottom: 1px solid black;
     list-style: none;
 }
