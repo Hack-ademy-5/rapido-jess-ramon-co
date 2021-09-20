@@ -48,8 +48,6 @@
         <small>Electrodomésticos</small>
     </div>
 
-
-
     <div class="item-cat">Mobiliario</div>
     <div class="item-cat">Deporte</div>
     <div class="item-cat">Móviles</div>
@@ -62,9 +60,7 @@
   
          <button aria-label="Siguiente" class="row arrow-horizontal-scroll">
         <i class="fas fa-chevron-right"></i>
-    </button>
-    </button>
-
+      </button>
 </div>
 
 
@@ -98,8 +94,6 @@
             @endif
           @endforeach
 
-
-         
 
             <!-- caja 3 (cat 2- mobiliario)-->
             <div class="col-md-6 col-lg-4">
