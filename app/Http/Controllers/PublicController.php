@@ -18,6 +18,15 @@ public function index() {
     return view('home', compact('ads'));
 }
 
+// >>>>>>   OJO! Igual que el anterior.  Desde aquí tengo que llamar a la vista para que se muestra el último registro (categoría)
+// public function index() {
+//     $ads = Ad::where('is_accepted', true)
+//         ->orderBy('created_at', 'desc')
+//         ->take(6)
+//         ->get();
+//     return view('home', compact('ads'));
+// }
+
 public function adsByCategory($name, $category_id)
     {
     $category = Category::find($category_id);
