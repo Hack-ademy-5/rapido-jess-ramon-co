@@ -8,13 +8,15 @@ return [
     'anuncio'=>'Ad',
     'usuario'=>'User',
     'leermas'=>'Read more',
-    'crearAnuncio'=> ' What would you up?',
+    'crearAnuncio'=>'What would you up?',
     'producto'=> 'Product',
     'descripcionAnuncio'=>'Product\'s description',
     'precio'=>'Price',
-
-
     'rechazar'=>'To refuse',
     'aceptar'=>'To accept',
-    'sinAnuncios'=>'There are no ads to review',    
+    'sinAnuncios'=>'There are no ads to review', 
+    'idioma'=>'Language',
+    'buscar'=>'Search', 
+    'visita'=>'Visit Us',
+    'derechos'=>'All rights reserved',
 ];

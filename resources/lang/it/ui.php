@@ -12,9 +12,11 @@ return [
     'producto'=> 'Prodotto',
     'descripcionAnuncio'=>'descrivi il tuo prodotto',
     'precio'=>'Prezzo',
-
-
     'rechazar'=>'per rifiutare',
     'aceptar'=>'Accettare',
     'sinAnuncios'=>'Non ci sono annunci da recensire', 
+    'idioma'=>'Idioma', 
+    'buscar'=>'Cercare', 
+    'visita'=>'Visitateci',
+    'derechos'=>'Tutti i diritti reservati',
 ];

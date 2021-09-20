@@ -1,0 +1,71 @@
+.backcolor-nav {
+    background-color: #dfebe8;
+}
+
+nav a,
+.nav-link {
+    color: #000;
+}
+
+.my-icon-nav{
+    background-color: #fbf6e1;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    border:2px solid black;
+}
+
+.ocultar{
+    visibility: hidden;
+}
+
+.mostrar:hover{
+    .ocultar{
+        visibility: visible;
+    }
+}
+
+.my-logout{
+    display: flex;
+    justify-content: center;
+}
+
+.flag-dropdown{
+    min-width: 0;
+}
+
+.my-idioma{
+    background-color: #fbf6e1;
+    border-radius: 25px;
+}
+
+.my-border-category{
+    border-bottom: 1px solid black;
+    list-style: none;
+}
+
+.my-category{
+    text-decoration: none;
+    color:black;
+}
+
+.my-card{
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.my-card-title{
+    text-transform: uppercase;
+}
+
+.my-cardDetail{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: #fbf6e1;
+}
+
+.footer-dcho{
+    size: 15px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,11 +1,7 @@
 @import "~flag-icon-css/sass/flag-icon";
 @import "~bootstrap/scss/bootstrap";
-@import "style.css";
 @import '~flag-icon-css/sass/flag-icon';
-.backcolor-nav {
-    background-color: #dfebe8;
-}
-nav a,
-.nav-link {
-    color: #000;
-}
+/* @import url('https://use.fontawesome.com/releases/v5.15.4/css/all.css'); */
+@import '~@fortawesome/fontawesome-free/css/all';
+@import "./style.scss";
+

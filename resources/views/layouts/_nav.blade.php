@@ -1,62 +1,101 @@
 <nav class="navbar navbar-expand-lg backcolor-nav sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Rapido.es</a>
+        
+        <!-- Icono de Rapido.es -->
+        <div class="navbar-brand my-icon-nav" href="#"><i class="fas fa-shipping-fast"></i>Rapido.es</div>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="fas fa-bars"></span>
         </button>
+        
+        <!-- Buscador -->
+        <form class="d-flex">
+            <button class="btn btn-outline-success ms-5" type="submit"><i class="fas fa-search"></i></button>
+            <input class="form-control" type="search" placeholder="{{__('ui.buscar')}}..." aria-label="Search">
+        </form>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <!-- Página principal -->
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                    <a class="nav-link active mostrar" aria-current="page" href="{{route('home')}}"><i class="fas fa-home ocultar"></i>Home</a>
                 </li>
+
+                <!-- Registro y Login si eres invitado -->
+                @guest
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('register')}}">{{__('ui.register')}}</a>
+                    <a class="nav-link active mostrar" aria-current="page" href="{{route('register')}}"><i class="fas fa-clipboard-check ocultar"></i>{{__('ui.register')}}</a>
                 </li>
+                
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('login')}}">Login</a>
+                    <a class="nav-link active mostrar" aria-current="page" href="{{route('login')}}"><i class="fas fa-sign-in-alt ocultar"></i>Login</a>
                 </li>
+                @endguest
+
+                <!-- Subir anuncio a la plataforma -->
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('ad.new')}}">{{__('ui.subir')}}</a>
+                    <a class="nav-link active mostrar" aria-current="page" href="{{ route('ad.new')}}"><i class="fas fa-upload ocultar"></i>{{__('ui.subir')}}</a>
                 </li>
+
+                <!-- Menú desplegable con las distintas categorías -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link mostrar dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        {{__('ui.categorias')}}
+                        <i class="fas fa-tags ocultar"></i>{{__('ui.categorias')}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @foreach ($categories as $category)
-                        <li><a class="dropdown-item"
+                        <li><a class="dropdown-item text-center"
                                 href="{{route('category.ads',['name'=>$category->name,'id'=>$category->id])}}">{{$category->name}}</a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
                         </li>
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+
+                <!-- Datos de usuario logueado -->
+                @if(Auth::user())
+                <li class="nav-item mx-2 px-2 dropdown">
+                    <a class="nav-link mostrar dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
+                        <i class="fas fa-house-user ocultar"></i>{{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item text-center" href="#">Mis anuncios</a></li>
+                        <li><a class="dropdown-item text-center" href="#">Another action</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <form action="/logout" method="POST">
+                            <form action="/logout" method="POST" class="my-logout">
                                 @csrf
                                 <button>Logout</button>
                             </form>
                         </li>
                     </ul>
                 </li>
+                @endif
+
+                <!-- Cambiar idioma. Disponibles: español, inglés e italiano -->
+                <div class="my-idioma ms-5 me-5">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mostrar dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="far fa-flag ocultar"></i>{{__('ui.idioma')}}
+                        </a>
+                        <ul class="dropdown-menu flag-dropdown" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'es','nation'=>'es'])</a></li>
+                            <li><a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'en','nation'=>'gb'])</a></li>
+                            <li><a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'it','nation'=>'it'])</a></li>
+                        </ul>
+                    </li>
+                </div>
+
+                <!-- Solo para el revisor -->
                 @auth
                 @if(Auth::user()->is_revisor)
-                <li class="nav-item">
+                <li class="nav-item mx-2 px-2">
                     <a class="nav-link" href="{{ route('revisor.home') }}">
                         Revisor Casa
                         <span class="badge rounded-pill bg-danger">
@@ -66,17 +105,8 @@
                 </li>
                 @endif
                 @endauth
-            </ul>
-            <div>
-                @include('layouts._locale',["lang"=>'es','nation'=>'es'])
-                @include('layouts._locale',["lang"=>'en','nation'=>'gb'])
-                @include('layouts._locale',["lang"=>'it','nation'=>'it'])
-            </div>
 
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </ul>
         </div>
     </div>
 </nav>
