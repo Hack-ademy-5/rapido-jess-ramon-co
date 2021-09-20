@@ -44,7 +44,7 @@
         <i class="far fa-eye"></i>
         <small>Electrodomésticos</small>
     </div>
-    
+
     <div class="item-cat">Mobiliario</div>
     <div class="item-cat">Deporte</div>
     <div class="item-cat">Móviles</div>
