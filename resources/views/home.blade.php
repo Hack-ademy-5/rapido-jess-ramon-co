@@ -39,10 +39,12 @@
     </button>
 
     <div class="item-cat">Todas las categorias</div>
+
     <div class="item-cat">
         <i class="far fa-eye"></i>
-        <div>Electrodomésticos</div>
+        <small>Electrodomésticos</small>
     </div>
+    
     <div class="item-cat">Mobiliario</div>
     <div class="item-cat">Deporte</div>
     <div class="item-cat">Móviles</div>

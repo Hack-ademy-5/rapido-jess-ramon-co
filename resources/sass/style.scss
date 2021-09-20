@@ -1,3 +1,173 @@
+// Variables de color
+$color-primary: #5f9a8c;
+$color-secondary: #dfebe8;
+$color-tertiary: #fbf6e1;
+$color-backg: #f9f9f9;
+
+// Modificando las variables de bootstrap
+$dark: $color-primary;
+$enable-gradients: true;
+$btn-padding-y: 0.7rem;
+$btn-padding-x: 1rem;
+
+// Variables Font Family
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+// stylelint-enable value-keyword-case
+$font-family-base: var(--#{$variable-prefix}font-sans-serif);
+$font-family-code: var(--#{$variable-prefix}font-monospace);
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root: null;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-normal;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+//  Inicializar CSS - inicio
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+//  Inicializar CSS - fin
+
+// INICIO: nav
+.backcolor-nav {
+    background-color: $color-secondary;
+}
+nav a,
+.nav-link {
+    color: #000;
+}
+// FIN: nav
+
+// >>> Diseño-home-INICIO( / )
+
+// text + h1
+
+.containerhome-text-h1 {
+    margin-top: 3em;
+    margin-bottom: 0.7em;
+}
+
+.text-family-h1 {
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+}
+
+.home-title {
+    margin-bottom: 2em;
+}
+
+// Slider Categorias
+.wrapper {
+    max-height: 120px;
+    // border: 1px solid rgb(150, 146, 146);
+    display: flex;
+    overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+    // width: 0;
+    display: none;
+}
+
+.wrapper .item-cat {
+    min-width: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    background-color: $color-backg;
+    margin-right: 2px;
+}
+
+.arrow-horizontal-scroll {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: #f9fafa;
+    border: none;
+    padding: 0;
+    transition: background-color 280ms ease-in;
+}
+
+// NO puedo mostrar la imagen
+// .img-arrow {
+//     width: 48px;
+//     height: 48px;
+//     overflow: hidden;
+// }
+
+// último anuncio de cada categoría
+.main-section-home {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+.box-measure {
+    height: 20em;
+}
+.box-with-text-one {
+    background-color: $color-tertiary;
+}
+.box-with-text-two {
+    background-color: $color-secondary;
+}
+// >>>Diseño-home - FIN ( / )
+
+// INICIO: Diseño /ad/new
+.section-new-ad {
+    background-color: $color-backg;
+}
+
+.col-new-ad {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 3em;
+}
+
+.main-tile-new-ad {
+    padding: 1.2em 0em;
+    font-size: 2em;
+}
+
+.empty-bottom {
+    margin-bottom: 1em;
+}
+.empty-top {
+    margin-top: 0.7em;
+}
+//FIN: diseño /ad/new
+
 .backcolor-nav {
     background-color: #dfebe8;
 }
@@ -7,6 +177,7 @@ nav a,
     color: #000;
 }
 
+//navbar
 .my-icon-nav{
     background-color: #fbf6e1;
     margin: 10px;
@@ -39,6 +210,7 @@ nav a,
     border-radius: 25px;
 }
 
+//cards
 .my-border-category{
     border-bottom: 1px solid black;
     list-style: none;

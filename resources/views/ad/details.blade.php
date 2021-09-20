@@ -18,12 +18,11 @@
                 <div class="card-body">
                     <p class="card-text"> {{$ad->body}}</p>
                     <h6 class="card-subtitle mb-2">{{__('Precio')}}: {{$ad->price}} €</h6>  
-                    <i> - Creado por: {{$ad->user->name }} el {{$ad->created_at->format('d/m/Y')}}</i></h6>
+                    <i> - {{__('ui.creadoPor')}}: {{$ad->user->name }} - {{$ad->created_at->format('d/m/Y')}}</i></h6>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 @endsection

@@ -19,4 +19,5 @@ return [
     'buscar'=>'Search', 
     'visita'=>'Visit Us',
     'derechos'=>'All rights reserved',
+    'creadoPor'=>'Created by',
 ];
