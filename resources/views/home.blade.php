@@ -34,15 +34,22 @@
 <!-- Inicio Carrousel de categorias -->
 
 <div class="container text-secondary fw-light wrapper">
-    <button class="row arrow-horizontal-scroll">
-        <img src="public/images/left-arrow.png" alt="" class="img-arrow">
+    <button aria-label="Anterior" class="row arrow-horizontal-scroll">
+        <i class="fas fa-chevron-left"></i>
     </button>
 
-    <div class="item-cat">Todas las categorias</div>
+        <div class="item-cat">Todas las categorias</div>
+
     <div class="item-cat">
-        <i class="far fa-eye"></i>
-        <div>Electrodomésticos</div>
+        <div class="single-item-cat text-center">
+        <img src="/images/left-arrow.png" alt="">
+      </div>
+
+        <small>Electrodomésticos</small>
     </div>
+
+
+
     <div class="item-cat">Mobiliario</div>
     <div class="item-cat">Deporte</div>
     <div class="item-cat">Móviles</div>
@@ -52,8 +59,10 @@
     <div class="item-cat">Motores</div>
     <div class="item-cat">Autos</div>
 
-    <button class="arrow-horizontal-scroll">
-        <img src="/public/images/right-arrow.png" alt="" class="img-arrow">
+  
+         <button aria-label="Siguiente" class="row arrow-horizontal-scroll">
+        <i class="fas fa-chevron-right"></i>
+    </button>
     </button>
 
 </div>
@@ -71,18 +80,26 @@
         <div class="row g-4">
 
             <!-- caja 1 (cat1 - elec)-->
+            @foreach ($categories as $category )
+            @if ($category->ads()->latest()->first())
             <div class="col-md-6 col-lg-4">
                 <!-- p-2_ 2 de padding alrededor -->
-                <div class="p-1 border box-measure ">Electrodomésticos </div>
+                <div class="p-1 border box-measure "> {{$category->ads()->latest()->first()->title }} </div>
             </div>
-
-            <!-- caja 2 (mensaje: Recicla)-->
+            @endif
+            @if ($loop->iteration % 3 == 0) 
+             <!-- caja 2 (mensaje: Recicla)-->
             <div class="col-md-6 col-lg-4">
                 <div class="p-4 box-measure d-none  d-sm-none d-md-block text-end box-with-text-one">
                     <h2 class="text-uppercase ">Gana dinero y ayuda al planeta</h2>
                     <p>Recicla · Reutiliza · Reduce</p>
                 </div>
             </div>
+            @endif
+          @endforeach
+
+
+         
 
             <!-- caja 3 (cat 2- mobiliario)-->
             <div class="col-md-6 col-lg-4">
