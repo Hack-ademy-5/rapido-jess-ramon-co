@@ -2,9 +2,10 @@
     <div class="container-fluid">
         
         <!-- Icono de Rapido.es -->
-        <div class="navbar-brand my-icon-nav" href="#"><i class="fas fa-shipping-fast"></i>Rapido.es</div>
+        <!-- <div class="navbar-brand my-icon-nav" href="#"><i class="fas fa-shipping-fast"></i>Rapido.es</div> -->
+         <div class="navbar-brand my-icon-nav" href="#">Rapido.es</div>
         
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fas fa-bars"></span>
         </button>
@@ -20,8 +21,10 @@
 
                 <!-- Página principal -->
                 <li class="nav-item">
-                    <a class="nav-link active mostrar" aria-current="page" href="{{route('home')}}"><i class="fas fa-home ocultar"></i>Home</a>
+                    <a class="nav-link active mostrar" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
+
+                <!-- <i class="fas fa-home ocultar"></i> -->
 
                 <!-- Registro y Login si eres invitado -->
                 @guest
@@ -36,15 +39,18 @@
 
                 <!-- Subir anuncio a la plataforma -->
                 <li class="nav-item">
-                    <a class="nav-link active mostrar" aria-current="page" href="{{ route('ad.new')}}"><i class="fas fa-upload ocultar"></i>{{__('ui.subir')}}</a>
+                    <a class="nav-link active mostrar" aria-current="page" href="{{ route('ad.new')}}">{{__('ui.subir')}}</a>
                 </li>
+
+                <!-- <i class="fas fa-upload ocultar"></i> -->
 
                 <!-- Menú desplegable con las distintas categorías -->
                 <li class="nav-item dropdown">
                     <a class="nav-link mostrar dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-tags ocultar"></i>{{__('ui.categorias')}}
+                        {{__('ui.categorias')}}
                     </a>
+                    <!-- <i class="fas fa-tags ocultar"></i> -->
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @foreach ($categories as $category)
                         <li><a class="dropdown-item text-center"
