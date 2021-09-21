@@ -32,15 +32,7 @@ public function index() {
 
 public function adsByCategory($name, $category_id)
     {
-   /*  $category = Category::find($category_id);
-    $ads = $category->ads()->where('is_accepted', true)->orderBy('created_at','desc')->take(1)
-    ->get()
-    ->paginate(5);
-   
-    return view('ads', compact ('category', 'ads'));
-     */
 
-    
      $category = Category::find($category_id);
      $ads = $category->ads()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(5);
    
