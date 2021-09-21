@@ -57,7 +57,7 @@
 
                 <!-- Datos de usuario logueado -->
                 @if(Auth::user())
-                <li class="nav-item mx-2 px-2 dropdown">
+                <li class="nav-item mx-3 px-3 dropdown">
                     <a class="nav-link mostrar dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-house-user ocultar"></i>{{Auth::user()->name}}
@@ -79,10 +79,10 @@
                 @endif
 
                 <!-- Cambiar idioma. Disponibles: español, inglés e italiano -->
-                <div class="d-flex">
-                    <a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'es','nation'=>'es'])</a>
-                    <a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'en','nation'=>'gb'])</a>
-                    <a class="dropdown-item" href="#">@include('layouts._locale',["lang"=>'it','nation'=>'it'])</a>
+                <div class="my-flag mx-3 px-3">
+                    <a href="#">@include('layouts._locale',["lang"=>'es','nation'=>'es'])</a>
+                    <a href="#">@include('layouts._locale',["lang"=>'en','nation'=>'gb'])</a>
+                    <a href="#">@include('layouts._locale',["lang"=>'it','nation'=>'it'])</a>
                 </div>
 
                 <!-- Subir anuncio a la plataforma -->

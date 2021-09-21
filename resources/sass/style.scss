@@ -344,19 +344,24 @@ nav a,
     color: black;
 }
 
-.my-card {
-    border: 2px solid black;
-    border-radius: 25px;
+.my-flag{
+    display: flex;
+    
+}
+
+.my-img-detail{
+    width: 300px;
+    height: 300px;
+}
+
+.my-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .my-card-title {
     text-transform: uppercase;
-}
-
-.my-cardDetail {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    background-color: #fbf6e1;
 }
 
 .footer-dcho {
