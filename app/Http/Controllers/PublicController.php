@@ -31,6 +31,7 @@ public function index() {
 // }
 
 public function adsByCategory($name, $category_id)
+<<<<<<< HEAD
     {
    /*  $category = Category::find($category_id);
     $ads = $category->ads()->where('is_accepted', true)->orderBy('created_at','desc')->take(1)
@@ -43,9 +44,21 @@ public function adsByCategory($name, $category_id)
     
      $category = Category::find($category_id);
      $ads = $category->ads()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(5);
+=======
+    // {
+    // $category = Category::find($category_id);
+    // $ads = $category->ads()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(5);
+>>>>>>> 68ab2dbf74c2c9b7bd2df925c57bf947f7191dd6
    
      return view('ads', compact ('category', 'ads'));
      }
+
+        {
+    $category = Category::find($category_id);
+    $ads = $category->ads()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(5);
+   
+    return view('ads', compact ('category', 'ads'));
+    }
 
 public function locale($locale)
     {

@@ -13127,33 +13127,45 @@ nav a,
   margin-bottom: 2em;
 }
 
-.wrapper {
-  max-height: 120px;
+.scroll-categories {
   display: flex;
   overflow-x: auto;
+  max-height: 180px;
 }
 
-.wrapper::-webkit-scrollbar {
-  display: none;
+.slider--categories {
+  list-style-type: none;
 }
 
-.wrapper .item-cat {
-  min-width: 110px;
-  height: 110px;
-  line-height: 110px;
+.slider--item {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
   text-align: center;
   background-color: #f9f9f9;
-  margin-right: 2px;
+  margin-right: 1em;
 }
 
-.arrow-horizontal-scroll {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background: #f9fafa;
-  border: none;
-  padding: 0;
-  transition: background-color 280ms ease-in;
+.category-icon {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  min-width: 68px;
+  min-height: 68px;
+}
+
+a {
+  display: block;
+  padding-top: 0px;
+  margin-top: 70px;
+  line-height: 22px;
+  color: #5f9a8c;
+  text-decoration: none;
+}
+
+.around--category-icon {
+  padding-bottom: 18px;
 }
 
 .main-section-home {
