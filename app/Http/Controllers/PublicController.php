@@ -31,13 +31,14 @@ public function index() {
 // }
 
 public function adsByCategory($name, $category_id)
-    {
+  
 
-     $category = Category::find($category_id);
-     $ads = $category->ads()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(5);
+        {
+    $category = Category::find($category_id);
+    $ads = $category->ads()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(5);
    
-     return view('ads', compact ('category', 'ads'));
-     }
+    return view('ads', compact ('category', 'ads'));
+    }
 
 public function locale($locale)
     {

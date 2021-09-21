@@ -4,7 +4,7 @@
         <!-- Icono de Rapido.es -->
         <div class="navbar-brand my-icon-nav" href="#">Rapido.es</div>
         
-        <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fas fa-bars"></span>
         </button>

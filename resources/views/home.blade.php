@@ -20,24 +20,22 @@
 <header class="container containerhome-text-h1 d-none  d-sm-none d-md-block">
     <div class="row  text-secondary text-center ">
         <span clas="text-home-h1 "> Rapido.es, plataforma de <h1 class="text-family-h1 d-inline ">compra-venta de
-                productos de segunda mano </h1>. Te ayudamos a ganar dinero y dejar un impacto postivo al
-            planeta.</span>
+                productos de segunda mano</h1> | Te ayudamos a ganar dinero y dejar un impacto postivo al
+            planeta</span>
     </div>
 </header>
 
 <div class="container text-center home-title">
-        <h2>Compra o Vende ¿Qué quieres hacer hoy?</h2>
-    </div>
+    <h2>Compra o Vende ¿Qué quieres hacer hoy?</h2>
+</div>
+
+<!-- CARROUSEL 2  INICIO-->
 
 
 
-<!-- Inicio Carrousel de categorias -->
 
 
-
-
-<!-- Fin Carrousel de categorias -->
-
+<!-- CARROUSEL 2  FIN-->
 
 
 <!--  sección: mostrar último anuncio por categoria -->
@@ -49,7 +47,7 @@
 <div class="row g-4">
 
 <!-- caja 1 (cat1 - elec)-->
-@foreach($categories as $category)
+@foreach ($categories as $category )
 @if ($category->ads()->latest()->first())
 <div class="col-md-6 col-lg-4">
 <!-- p-2_ 2 de padding alrededor -->
@@ -87,6 +85,9 @@
 @endif
 @endforeach
 
+
 </section>
+
+
 
 @endsection
