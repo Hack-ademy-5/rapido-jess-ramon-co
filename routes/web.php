@@ -37,3 +37,9 @@ Route::post('/revisor/ad/{id}/reject',[RevisorController::class,'reject'])->name
 
 //Rutas para los idiomas
 Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('locale');
+
+//Ruta para subir imagen a ad
+Route::post('/ad/images/upload', [AdController::class,'uploadImages'])->name('ad.images.upload');
+
+//Para eliminar imágenes
+Route::delete('/ad/images/remove', [AdController::class,'removeImages'])->name('ad.images.remove');
