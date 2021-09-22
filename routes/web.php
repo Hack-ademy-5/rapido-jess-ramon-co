@@ -26,11 +26,15 @@ Route::post('/ad/create', [AdController::class,'createAd'])->name('ad.create');
 //mostrar Anuncio por Categoria
 Route::get('/category/{name}/{id}/ads', [PublicController::class,'adsByCategory'])->name('category.ads');
 
+//Recuperar imagen tras error de validación
+Route::get('/ad/images', [AdController::class,'getImages'])->name('ad.images');
+
 //mostrar anuncio
 Route::get('/ad/{id}', [AdController::class,'details'])->name("ad.details");
 
 //Rutas para el revisor
 Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');
+
 //Rutas para aceptar o rechazar
 Route::post('/revisor/ad/{id}/accept',[RevisorController::class,'accept'])->name('revisor.ad.accept');
 Route::post('/revisor/ad/{id}/reject',[RevisorController::class,'reject'])->name('revisor.ad.reject');
@@ -43,3 +47,4 @@ Route::post('/ad/images/upload', [AdController::class,'uploadImages'])->name('ad
 
 //Para eliminar imágenes
 Route::delete('/ad/images/remove', [AdController::class,'removeImages'])->name('ad.images.remove');
+

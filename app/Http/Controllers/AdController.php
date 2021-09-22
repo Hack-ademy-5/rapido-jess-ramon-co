@@ -8,9 +8,10 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Storage;
+
 
 class AdController extends Controller
 {
@@ -37,9 +38,13 @@ class AdController extends Controller
 
     }
 
-    public function newAd() 
-    { 
-        $uniqueSecret = base_convert(sha1(uniqid(mt_rand())), 16, 36);
+  
+ public function newAd(Request $request) 
+    {   $uniqueSecret = $request->old(
+        'uniqueSecret',
+        base_convert(sha1(uniqid(mt_rand())), 16, 36)
+    );
+        
         return view('ad.new', compact('uniqueSecret')); 
     }
     
@@ -85,11 +90,12 @@ class AdController extends Controller
 
         $uniqueSecret = $request->input('uniqueSecret');
         $filePath = $request->file('file')->store("public/temp/{$uniqueSecret}");
-        session()->push("images.{$uniqueSecret}", $filePath);
-        
-        return response()->json(
-            session()->get("images.{$uniqueSecret}")
-            
+session()->push("images.{$uniqueSecret}", $filePath);
+         return response()->json(
+             [
+                 'id'=> $filePath
+             ]
+     
         );
         
     }
@@ -158,4 +164,22 @@ class AdController extends Controller
     {
         //
     }
+
+public function getImages(Request $request){
+            $uniqueSecret = $request->input('uniqueSecret');
+            $images = session()->get("images.{$uniqueSecret}", []);
+            $removedImages = session()->get("removedImages.{$uniqueSecret}",[]);
+            $images = array_diff($images, $removedImages);
+            $data = [];
+            foreach($images as $image){
+              $data[] = [
+                'id' => $image,
+                'name' => basename($image),
+                'src' => Storage::url($image),
+                'size'=> Storage::size($image)
+            ];
+               
+            }
+            return response()->json($data);
+        }
 }
