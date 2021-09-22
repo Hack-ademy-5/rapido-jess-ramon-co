@@ -26,6 +26,9 @@ Route::post('/ad/create', [AdController::class,'createAd'])->name('ad.create');
 //mostrar Anuncio por Categoria
 Route::get('/category/{name}/{id}/ads', [PublicController::class,'adsByCategory'])->name('category.ads');
 
+//para guardar imagenes si hay error de validacion
+Route::get('/ad/images', [AdController::class,'getImages'])->name('ad.images');
+
 //mostrar anuncio
 Route::get('/ad/{id}', [AdController::class,'details'])->name("ad.details");
 
@@ -43,3 +46,4 @@ Route::post('/ad/images/upload', [AdController::class,'uploadImages'])->name('ad
 
 //Para eliminar imágenes
 Route::delete('/ad/images/remove', [AdController::class,'removeImages'])->name('ad.images.remove');
+
