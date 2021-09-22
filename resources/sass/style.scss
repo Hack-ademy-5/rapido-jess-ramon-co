@@ -59,11 +59,11 @@ body {
 
 // INICIO: nav
 .backcolor-nav {
-    background-color: $color-secondary;
+    background-color: $color-primary;
 }
 nav a,
 .nav-link {
-    color: #000;
+    color: #fff;
 }
 
 .my-icon-nav {
@@ -84,8 +84,9 @@ nav a,
 }
 
 .my-idioma {
-    background-color: #fbf6e1;
-    border-radius: 25px;
+    background-color: #000;
+    border-radius: 4px;
+    padding: 0.4 em;
 }
 
 .my-flag {

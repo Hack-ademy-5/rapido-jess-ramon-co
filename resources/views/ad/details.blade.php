@@ -4,6 +4,7 @@
 
 @section('content')
 
+
 @if(session('ad.create.success'))
 <div class="alert alert-success">{{session('ad.create.success')}}</div>
 @endif
