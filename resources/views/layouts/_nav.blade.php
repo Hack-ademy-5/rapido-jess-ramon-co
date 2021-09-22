@@ -2,7 +2,9 @@
     <div class="container-fluid">
         
         <!-- Icono de Rapido.es -->
-        <div class="navbar-brand my-icon-nav" href="#">Rapido.es</div>
+
+        <div> <img src="/images/logo-rapido.png" alt=""> </div>
+
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,7 +83,7 @@
 
                 <!-- Subir anuncio a la plataforma -->
                 <li class="nav-item my-idioma">
-                    <a class="nav-link active" aria-current="page" href="{{ route('ad.new')}}">{{__('ui.subir')}}</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('ad.new')}}"> <i class="fas fa-plus-square"></i>  {{__('ui.subir')}}</a>
                 </li>
 
                 <!-- Solo para el revisor -->

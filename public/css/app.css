@@ -13103,12 +13103,12 @@ body {
 }
 
 .backcolor-nav {
-  background-color: #dfebe8;
+  background-color: #5f9a8c;
 }
 
 nav a,
 .nav-link {
-  color: #000;
+  color: #fff;
 }
 
 .my-icon-nav {
@@ -13128,8 +13128,9 @@ nav a,
 }
 
 .my-idioma {
-  background-color: #fbf6e1;
-  border-radius: 25px;
+  background-color: #000;
+  border-radius: 4px;
+  padding: 0.4 em;
 }
 
 .my-flag {
