@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ad;
 use App\Models\AdImage;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
 use Illuminate\Support\Facades\Auth;
@@ -38,9 +39,13 @@ class AdController extends Controller
 
     }
 
-    public function newAd() 
-    { 
-        $uniqueSecret = base_convert(sha1(uniqid(mt_rand())), 16, 36);
+  
+ public function newAd(Request $request) 
+    {   $uniqueSecret = $request->old(
+        'uniqueSecret',
+        base_convert(sha1(uniqid(mt_rand())), 16, 36)
+    );
+        
         return view('ad.new', compact('uniqueSecret')); 
     }
     
@@ -66,6 +71,13 @@ class AdController extends Controller
             $fileName = basename($image);
             $newFilePath = "public/ads/{$a->id}/{$fileName}";
             Storage::move($image,$newFilePath);
+
+            dispatch(new ResizeImage(
+                $newFilePath,
+                300,
+                150
+            ));
+
             $i->file = $newFilePath;
             $i->ad_id = $a->id;
             $i->save();
@@ -83,18 +95,15 @@ class AdController extends Controller
 
     public function uploadImages(Request $request)
     {
-
-        $uniqueSecret = $request->input('uniqueSecret');
+    $uniqueSecret = $request->input('uniqueSecret');
         $filePath = $request->file('file')->store("public/temp/{$uniqueSecret}");
-        
+        dispatch(new ResizeImage($filePath,120,120));
         session()->push("images.{$uniqueSecret}", $filePath);
         return response()->json(
             [
-                'id'=> $filePath
+            'id' => $filePath
             ]
-
-        );
-        
+            );
     }
 
     public function removeImages(Request $request)
@@ -162,22 +171,21 @@ class AdController extends Controller
         //
     }
 
-    public function getImages(Request $request){
-        $uniqueSecret = $request->input('uniqueSecret');
-        $images = session()->get("images.{$uniqueSecret}", []);
-        $removedImages = session()->get("removedImages.{$uniqueSecret}",[]);
-        $images = array_diff($images, $removedImages);
-        $data = [];
-        foreach($images as $image){
-            
-        $data[] = [
-            'id' => $image,
-            'name' => basename($image),
-            'src' => Storage::url($image),
-            'size'=> Storage::size($image)
-        ];
-        
+public function getImages(Request $request){
+            $uniqueSecret = $request->input('uniqueSecret');
+            $images = session()->get("images.{$uniqueSecret}", []);
+            $removedImages = session()->get("removedImages.{$uniqueSecret}",[]);
+            $images = array_diff($images, $removedImages);
+            $data = [];
+            foreach($images as $image){
+              $data[] = [
+                'id' => $image,
+                'name' => basename($image),
+                'src' => Storage::url($image),
+                'size'=> Storage::size($image)
+            ];
+               
+            }
+            return response()->json($data);
         }
-        return response()->json($data);
-    }
 }

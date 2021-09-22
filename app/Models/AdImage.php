@@ -14,4 +14,9 @@ class AdImage extends Model
     {
         return $this->belongsTo(Ad::class);
     }
+
+    static public function getUrlByFilePath($filePath, $w = null, $h = null)
+    {
+        
+    }   
 }

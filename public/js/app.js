@@ -5215,10 +5215,10 @@ document.Dropzone = __webpack_require__(/*! dropzone */ "./node_modules/dropzone
 
 (function () {
   if (document.getElementById("drophere")) {
-    var csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute('content');
-    var uniqueSecret = document.querySelector("input[name='uniqueSecret']").getAttribute('value');
-    var myDropzone = new Dropzone('#drophere', {
-      url: '/ad/images/upload',
+    var csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content");
+    var uniqueSecret = document.querySelector("input[name='uniqueSecret']").getAttribute("value");
+    var myDropzone = new Dropzone("#drophere", {
+      url: "/ad/images/upload",
       params: {
         _token: csrfToken,
         uniqueSecret: uniqueSecret
@@ -5226,7 +5226,7 @@ document.Dropzone = __webpack_require__(/*! dropzone */ "./node_modules/dropzone
       addRemoveLinks: true,
       init: function init() {
         fetch("/ad/images?uniqueSecret=".concat(uniqueSecret), {
-          method: 'GET'
+          method: "GET"
         }).then(function (response) {
           return response.json();
         }).then(function (data) {
@@ -5244,15 +5244,15 @@ document.Dropzone = __webpack_require__(/*! dropzone */ "./node_modules/dropzone
         });
       }
     });
-    myDropzone.on('success', function (file, response) {
+    myDropzone.on("success", function (file, response) {
       file.serverId = response.id;
     });
     myDropzone.on("removedfile", function (file) {
-      fetch('/ad/images/remove', {
-        method: 'DELETE',
+      fetch("/ad/images/remove", {
+        method: "DELETE",
         // *GET, POST, PUT, DELETE, etc.
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
           _token: csrfToken,

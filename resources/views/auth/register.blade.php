@@ -11,7 +11,7 @@
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name"
-            {{old('name')}}>
+            value="{{old('name')}}">
     </div>
     @error('name')
     <small id="emailHelp" class="form-text" style="color:red;">
@@ -20,7 +20,7 @@
     @enderror
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">e-mail</label>
-        <input type="email" class="form-control" id="exampleInputPassword1" name="email" {{old('email')}}>
+        <input type="email" class="form-control" id="exampleInputPassword1" name="email" value="{{old('email')}}">
     </div>
     @error('email')
     <small id="emailHelp" class="form-text" style="color:red;">

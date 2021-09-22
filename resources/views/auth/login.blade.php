@@ -8,9 +8,10 @@
 
 <form method="POST" action="{{route('login')}}">
     @csrf
-    <div class="mb-3">
+
+    <div class="mb-3 form-group empty-bottom">
         <label for="exampleInputPassword1" class="form-label">e-mail</label>
-        <input type="email" class="form-control" id="exampleInputPassword1" name="email" {{old('email')}}>
+        <input type="email" class="form-control" id="exampleInputPassword1" name="email" value="{{old('email')}}">
     </div>
     @error('email')
     <small id="emailHelp" class="form-text" style="color:red;">
@@ -30,9 +31,10 @@
     @enderror
 
     <button type="submit" class="btn btn-primary">Login</button>
+
     <div class="div form-link d-flex mt-4 ms-5 ps-5 ">
         <p class="text-white">¿You dont have an account? </p>
-        <a class="text-reset text-decoration-none ms-2" href="{{route('register')}}"><u> Register here</u></a>
+        <a class="text-reset text-decoration-none ms-2" href="{{route('register')}}"><u>{{__('ui.register')}}</u></a>
     </div>
 </form>
 @endsection

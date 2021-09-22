@@ -4,7 +4,6 @@
 
 @section('content')
 
-
 <!-- inicio diseño bootstrap -->
 
 <section class="section-new-ad">
@@ -21,6 +20,7 @@
                     Nuevo anuncio (Secret: {{$uniqueSecret}})
                 </div>    
                 <input type="hidden" name="uniqueSecret" value="{{$uniqueSecret}}">
+
                 <!-- Producto -->
                 <div class="form-group empty-bottom">
                     <label for="adName">{{__('ui.producto')}}</label>
