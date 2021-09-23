@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\ResizeImage;
 use App\Models\Ad;
 use App\Models\AdImage;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Storage;
+use App\Jobs\GoogleVisionSafeLabelImage;
+use App\Jobs\GoogleVisionSafeSearchImage;
 
 
 class AdController extends Controller
@@ -72,13 +74,12 @@ class AdController extends Controller
             $newFilePath = "public/ads/{$a->id}/{$fileName}";
             Storage::move($image,$newFilePath);
             dispatch(new ResizeImage(
-            $newFilePath,
-            300,
-            150
-          ));
+            $newFilePath, 300, 150));
             $i->file = $newFilePath;
             $i->ad_id = $a->id;
             $i->save();
+            dispatch(new GoogleVisionSafeSearchImage($i->id));
+            dispatch(new GoogleVisionSafeLabelImage($i->id));
         }
         File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
 
@@ -191,3 +192,5 @@ public function getImages(Request $request){
             return response()->json($data);
         }
 }
+
+
