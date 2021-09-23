@@ -17,7 +17,7 @@
             <form method="POST" action='{{route("ad.create")}}'>
                 @csrf
                 
-                <div class="card-header" >
+                <div class="card-header d-none" >
                     Nuevo anuncio (Secret: {{$uniqueSecret}})
                 </div>    
                 <input type="hidden" name="uniqueSecret" value="{{$uniqueSecret}}">
