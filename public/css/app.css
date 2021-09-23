@@ -5767,7 +5767,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #0a58ca;
+  color: #fbf6e1;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -13209,6 +13209,11 @@ nav a,
 
 .empty-top {
   margin-top: 0.7em;
+}
+
+.section-login-page {
+  background-color: #fbf6e1;
+  padding-top: 3.6em;
 }
 
 .backcolor-footer {

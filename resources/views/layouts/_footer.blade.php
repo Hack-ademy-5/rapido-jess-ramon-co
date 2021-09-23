@@ -1,4 +1,4 @@
-<div class="container-fluid backcolor-footer my-2 py-2">
+<div class="container-fluid backcolor-footer py-2">
     
     <div class="row my-border-category my-2 py-2">
         @foreach ($categories as $category)

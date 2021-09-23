@@ -5206,12 +5206,11 @@ module.exports = {
   \**********************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // hasta la 5.7.2
+// hasta la 5.7.2
 //window.Dropzone = require('dropzone');
 // de la 5.7.4
-
-
 document.Dropzone = __webpack_require__(/*! dropzone */ "./node_modules/dropzone/dist/dropzone.js");
+Dropzone.autoDiscover = false;
 
 (function () {
   if (document.getElementById("drophere")) {

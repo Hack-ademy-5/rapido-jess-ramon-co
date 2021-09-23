@@ -51,10 +51,17 @@
 @if ($category->ads()->latest()->first())
 <div class="col-md-6 col-lg-4">
 <!-- p-2_ 2 de padding alrededor -->
-<div class="p-1 border box-measure "> {{$category->ads()->latest()->first()->title }} </div>
+
+<div class="p-1 border box-measure ">  
+@if ($category->ads()->latest()->first()->images()->first())
+<img class="img-fluid" src="{{Storage::url($category->ads()->latest()->first()->images()->first()->file)}}" alt="">
+@endif
+{{$category->ads()->latest()->first()->title}}    
+</div>
 </div>
 @endif
 @if ($loop->iteration == 1)
+
 <!-- caja 2 (mensaje: Recicla)-->
 <div class="col-md-6 col-lg-4">
 <div class="p-4 box-measure d-none d-sm-none d-md-block text-end box-with-text-one">
