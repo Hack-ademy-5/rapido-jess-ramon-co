@@ -4,7 +4,6 @@
         <!-- Icono de Rapido.es -->
 
         <div> <img src="/images/logo-rapido.png" alt=""> </div>
-
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

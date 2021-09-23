@@ -1,9 +1,10 @@
-require("./bootstrap");
+
 // hasta la 5.7.2
 //window.Dropzone = require('dropzone');
 
 // de la 5.7.4
 document.Dropzone = require("dropzone");
+Dropzone.autoDiscover = false;
 
 (function () {
     if (document.getElementById("drophere")) {
