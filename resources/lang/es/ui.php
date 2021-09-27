@@ -29,7 +29,4 @@ return [
     'titulo2'=>'compra-venta de productos de segunda mano',
     'titulo3'=>'Te ayudamos a ganar dinero y dejar un impacto postivo al planeta',
     'compra'=>'Compra o Vende ¿Qué quieres hacer hoy?',
-    'card1'=>'Gana dinero y ayuda al planeta',
-    'card2'=>'Vende las cosas que tienes almacenadas hace meses, ayuda a que otros disfruten de ellas',
-    'card3'=>'te ayuda a reducir las emisiones de CO2 desde la comodidad de tu casa',
 ];

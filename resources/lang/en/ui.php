@@ -29,7 +29,4 @@ return [
     'titulo2'=>'buying and selling of second hand products',
     'titulo3'=>'We help you earn money and leave a positive impact on planet',
     'compra'=>'Buy or Sell What do you want to do today?',
-    'card1'=>'Earn money and help the planet',
-    'card2'=>'Sell ​​the things you have stored for months, help others enjoy them',
-    'card3'=>'helps you reduce CO2 emissions from the comfort of your home',
 ];
