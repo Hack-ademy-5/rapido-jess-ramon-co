@@ -27,14 +27,6 @@
     <h2>{{__('ui.compra')}}</h2>
 </div>
 
-<!-- CARROUSEL 2  INICIO-->
-
-
-
-
-
-<!-- CARROUSEL 2  FIN-->
-
 
 <!--  sección: mostrar último anuncio por categoria -->
 
@@ -49,7 +41,6 @@
 @if ($category->ads()->latest()->first())
 <div class="col-md-6 col-lg-4">
 <!-- p-2_ 2 de padding alrededor -->
-
 <div class="p-1 border box-measure ">  
 @if ($category->ads()->latest()->first()->images()->first())
 <img class="img-fluid" src="{{Storage::url($category->ads()->latest()->first()->images()->first()->file)}}" alt="">
@@ -70,7 +61,7 @@
 @endif
 
 @if ($loop->iteration == 4)
-<!-- caja 6 (Mensaje Reutiliza) -->
+<!-- caja 6 (Mensaje2: Reutiliza) -->
 <div class="col-md-6 col-lg-4">
 <div class="p-4 box-measure d-none d-sm-none d-md-block text-end box-with-text-two">
 <h2 class="text-uppercase">Reutiliza</h2>
@@ -80,7 +71,7 @@
 @endif
 
 @if ($loop->iteration == 6)
-<!-- caja 6 (Mensaje Reutiliza) -->
+<!-- caja 9 (Mensaje3: Reduce) -->
 <div class="col-md-6 col-lg-4">
 <div class="p-4 box-measure d-none d-sm-none d-md-block text-end box-with-text-two">
 <h2 class="text-uppercase">Reduce</h2>
