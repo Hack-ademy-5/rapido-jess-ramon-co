@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="{{mix('css/app.css')}}">
         <!-- el link Lavavel MIX | primero copila resouce >sass > app.scss  llama a public > css > app.css (y ya renderiza nuestra página)-->
 
+  <link rel="icon" href="/images/favicon-rapido.jpg" sizes="50x50" />
     <title>rapidoEs · @yield('title')</title>
 </head>
 

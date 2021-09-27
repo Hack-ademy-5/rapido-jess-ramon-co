@@ -205,7 +205,7 @@ nav a,
 
 //inicio detail
 .my-border-category {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(99, 98, 98);
     list-style: none;
 }
 
@@ -223,9 +223,40 @@ nav a,
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
 }
 
 .my-card-title {
-    text-transform: uppercase;
+    font-size: 22px;
 }
+
 //fin detail
+
+// card detail
+
+.text-size-detail {
+    margin-top: 1em;
+    font-size: 15px;
+}
+
+.detail-button {
+    margin-bottom: 4em;
+}
+
+.button-card-detail {
+    display: inline-block;
+    padding: 12px 74px;
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #9365ff, #5f9a8c);
+}
+
+.margin-detail {
+    margin-top: 1.2em;
+}
