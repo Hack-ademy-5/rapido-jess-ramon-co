@@ -58,11 +58,6 @@
                         {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-center" href="#">Mis anuncios</a></li>
-                        <li><a class="dropdown-item text-center" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
                         <li>
                             <form action="/logout" method="POST" class="my-logout">
                                 @csrf

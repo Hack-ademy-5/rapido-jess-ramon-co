@@ -29,7 +29,5 @@
     </div>
 </div>
 <!-- MOSTRAR 6 últimas categorias - FIN -->
-@endif
-@endforeach
-</section>
+
 @endsection
