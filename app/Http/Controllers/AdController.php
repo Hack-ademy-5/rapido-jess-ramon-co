@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Storage;
 use App\Jobs\GoogleVisionSafeLabelImage;
 use App\Jobs\GoogleVisionSafeSearchImage;
 
-
 class AdController extends Controller
 {
     /**

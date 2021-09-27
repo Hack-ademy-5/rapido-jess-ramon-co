@@ -28,9 +28,8 @@
                 <p>
                     <strong>Categoria: <a href="{{route('category.ads',['name'=>$ad->category->name,'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong><br>
                     <i>{{$ad->created_at->format('d/m/Y')}} -{{ $ad->user->name  }}</i>
-                  </p>
-      <a class="button-card-home" href="{{route("ad.details", ['id'=>$ad->id])}}" class="btn btn-danger" >¡Quiero ver más! 
-      </a>
+      </h5>
+      <a href="{{route("ad.details", ['id'=>$ad->id])}}" class="btn btn-danger">¡{{__('ui.verMas')}}!</a>
     </div>
   </div>
 </div>

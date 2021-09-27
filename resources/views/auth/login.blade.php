@@ -36,7 +36,7 @@
 
                     <button type="submit" class="btn btn-dark" class="mt-2">Login</button>
 
-                    <p class="text-dark mt-1">Crear tu cuenta en rapido.com <a class="text-reset text-decoration-none ms-2" href="{{route('register')}}"><u>CLICA AQUÍ</u></a></p>
+                    <p class="text-dark mt-1">{{__('ui.cuenta')}} rapido.com <a class="text-reset text-decoration-none ms-2" href="{{route('register')}}"><u>CLICA AQUÍ</u></a></p>
 
                     <!-- <div class="div form-link d-flex mt-4 ms-5 ps-5 ">
                         <p class="text-dark">¿You dont have an account?

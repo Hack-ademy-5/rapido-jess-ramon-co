@@ -11,9 +11,9 @@
         </button>
         
         <!-- Buscador -->
-        <form class="d-flex">
+        <form action="{{ route('search') }}" method="GET" class="d-flex">
             <button class="btn btn-outline-success ms-5" type="submit"><i class="fas fa-search"></i></button>
-            <input class="form-control" type="search" placeholder="{{__('ui.buscar')}}..." aria-label="Search">
+            <input class="form-control" type="text" name="q" placeholder="{{__('ui.buscar')}}..." aria-label="Search">
         </form>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
