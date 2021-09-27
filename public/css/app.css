@@ -13255,7 +13255,7 @@ nav a,
 }
 
 .my-border-category {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #636262;
   list-style: none;
 }
 
@@ -13273,10 +13273,38 @@ nav a,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
 }
 
 .my-card-title {
+  font-size: 22px;
+}
+
+.text-size-detail {
+  margin-top: 1em;
+  font-size: 15px;
+}
+
+.detail-button {
+  margin-bottom: 4em;
+}
+
+.button-card-detail {
+  display: inline-block;
+  padding: 12px 74px;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #9365ff, #5f9a8c);
+}
+
+.margin-detail {
+  margin-top: 1.2em;
 }
 
 /*!
