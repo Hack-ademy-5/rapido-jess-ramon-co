@@ -19,14 +19,12 @@
 
 <header class="container containerhome-text-h1 d-none  d-sm-none d-md-block">
     <div class="row  text-secondary text-center ">
-        <span clas="text-home-h1 "> Rapido.es, plataforma de <h1 class="text-family-h1 d-inline ">compra-venta de
-                productos de segunda mano</h1> | Te ayudamos a ganar dinero y dejar un impacto postivo al
-            planeta</span>
+        <span clas="text-home-h1 "> Rapido.es, {{__('ui.titulo1')}} <h1 class="text-family-h1 d-inline ">{{__('ui.titulo2')}}</h1> | {{__('ui.titulo3')}}</span>
     </div>
 </header>
 
 <div class="container text-center home-title">
-    <h2>Compra o Vende ¿Qué quieres hacer hoy?</h2>
+    <h2>{{__('ui.compra')}}</h2>
 </div>
 
 <!-- CARROUSEL 2  INICIO-->
@@ -65,7 +63,7 @@
 <!-- caja 2 (mensaje: Recicla)-->
 <div class="col-md-6 col-lg-4">
 <div class="p-4 box-measure d-none d-sm-none d-md-block text-end box-with-text-one">
-<h2 class="text-uppercase ">Gana dinero y ayuda al planeta</h2>
+<h2 class="text-uppercase ">{{__('ui.card1')}}</h2>
 <p>Recicla · Reutiliza · Reduce</p>
 </div>
 </div>
@@ -76,7 +74,7 @@
 <div class="col-md-6 col-lg-4">
 <div class="p-4 box-measure d-none d-sm-none d-md-block text-end box-with-text-two">
 <h2 class="text-uppercase">Reutiliza</h2>
-<p>Vende las cosas que tienes almacenadas hace meses, ayuda a que otros disfruten de ellas.</p>
+<p>{{__('ui.card2')}}</p>
 </div>
 </div>
 @endif
@@ -86,7 +84,7 @@
 <div class="col-md-6 col-lg-4">
 <div class="p-4 box-measure d-none d-sm-none d-md-block text-end box-with-text-two">
 <h2 class="text-uppercase">Reduce</h2>
-<p>Rapido.es te ayuda a reducir las emisiones de CO2 desde la comodidad de tu casa.</p>
+<p>Rapido.es {{__('ui.card3')}}.</p>
 </div>
 </div>
 @endif

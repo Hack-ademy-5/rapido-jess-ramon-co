@@ -26,7 +26,7 @@
                     <strong>Categoria: <a href="{{route('category.ads',['name'=>$ad->category->name,'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong>
                     <i>{{$ad->created_at->format('d/m/Y')}} -{{ $ad->user->name  }}</i>
       </h5>
-      <a href="{{route("ad.details", ['id'=>$ad->id])}}" class="btn btn-danger">¡Quiero ver más!</a>
+      <a href="{{route("ad.details", ['id'=>$ad->id])}}" class="btn btn-danger">¡{{__('ui.verMas')}}!</a>
     </div>
   </div>
 </div>

@@ -14,7 +14,7 @@
             <form method="POST" action="{{route('register')}}">
                 @csrf
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                    <label for="exampleInputEmail1" class="form-label">{{__('ui.nombre')}}</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         name="name" {{old('name')}}>
                 </div>
@@ -43,7 +43,7 @@
                 </small>
                 @enderror
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Confirmar Password</label>
+                    <label for="exampleInputPassword1" class="form-label">{{__('confirmar')}}</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" name="password_confirmation">
                 </div>
                 @error('password_confirmation')
@@ -52,7 +52,7 @@
                 </small>
                 @enderror
 
-                <button type="submit" class="btn btn-dark">Registrarse</button>
+                <button type="submit" class="btn btn-dark">{{__('ui.register')}}</button>
             </form>
 
         </div>

@@ -48,3 +48,5 @@ Route::post('/ad/images/upload', [AdController::class,'uploadImages'])->name('ad
 //Para eliminar imágenes
 Route::delete('/ad/images/remove', [AdController::class,'removeImages'])->name('ad.images.remove');
 
+//Ruta para búsquedas
+Route::get('/search', [PublicController::class,'search'])->name('search');
